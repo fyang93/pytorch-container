@@ -1,23 +1,21 @@
 version: '3'
 services:
-  pytorch:
+  dev:
     build:
       context: .
       args:
         - USERNAME=yf
-        - USER_UID=1021
-        - USER_GID=1021
+        - USER_UID=1024
+        - USER_GID=1024
     runtime: nvidia
     environment:
-      - PYTHONPATH=/workspace
-      - DB_ROOT=/data
       - JUPYTER_ENABLE_LAB=yes
       - NVIDIA_VISIBLE_DEVICES=all
       - NVIDIA_DRIVER_CAPABILITIES=all
     ipc: host
     volumes:
-      - $HOME/workspace:/workspace:cached
-      - $HOME/data:/data:cached
+      - /home/yf/workspace:/home/yf/workspace:cached
+      - /home/yf/data:/home/yf/data:cached
     ports:
       - 7860:7860
     command: /bin/sh -c "while sleep 1000; do :; done"
