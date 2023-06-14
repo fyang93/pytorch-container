@@ -14,8 +14,8 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
     ipc: host
     volumes:
-      - /home/yf/workspace:/home/yf/workspace:cached
-      - /home/yf/data:/home/yf/data:cached
+      - /home/yf/workspace:/home/yf/workspace
+      - /home/yf/data:/home/yf/data
     ports:
       - 7860:7860
     command: /bin/sh -c "while sleep 1000; do :; done"
