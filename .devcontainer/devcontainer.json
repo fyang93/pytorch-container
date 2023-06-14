@@ -4,5 +4,5 @@
     "service": "dev",
     "workspaceFolder": "/home/yf/workspace",
     "extensions": ["ms-python.python", "ms-python.vscode-pylance"],
-    "shutdownAction": "stopCompose",
+    "shutdownAction": "none",
   }

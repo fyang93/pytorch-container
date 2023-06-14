@@ -6,7 +6,6 @@ services:
       args:
         - USERNAME=yf
         - USER_UID=1024
-        - USER_GID=1024
     runtime: nvidia
     environment:
       - JUPYTER_ENABLE_LAB=yes
